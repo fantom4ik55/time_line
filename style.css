@@ -1,0 +1,152 @@
+.timeframe {
+  padding: 5px;
+  background-color: #999;
+  display: flex;
+  justify-content: center;
+}
+
+.timeframe .timestamp {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: -40px;
+}
+
+.timeframe .status_last {
+  padding: 0px 10px;
+  display: flex;
+  justify-content: center;
+  border-top: 3px solid #fff;
+  position: relative;
+  transition: all 200ms ease-in;
+}
+
+.timeframe .status_last span {
+  padding-top: 8px;
+}
+
+.timeframe .status_last span:before {
+  color: #fff;
+  font-size: 10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0%;
+  transform: translate(0%, -60%);
+  transition: all 200ms ease-in;
+}
+
+.timeframe .item .status {
+  margin-top: 5px;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: center;
+  border-top: 3px solid #fff;
+  position: relative;
+  transition: all 200ms ease-in;
+}
+
+.timeframe .status span {
+  padding-top: 8px;
+}
+
+.timeframe .status span:before {
+  content: attr(data-step);
+  color: #999;
+  font-size: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 12px;
+  border: 2px solid #fff;
+  position: absolute;
+  right: 0;
+  top: 0%;
+  transform: translate(0%, -60%);
+  transition: all 200ms ease-in;
+}
+
+.timeframe .item {
+  text-align: center;
+  font-size: 12px;
+  width: 100%;
+  min-height: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeframe .timestamp-text {
+  color: #fff;
+}
+
+.timeframe .timestamp-last {
+  margin-right: -25px;
+}
+
+.timeframe .item.active .status_last {
+  border-top: 3px solid rgb(61, 181, 170);
+}
+
+.timeframe .item.active span:before {
+  color: #fff;
+  background-color: rgb(61, 181, 170);
+  border: 2px solid rgb(61, 181, 170);
+}
+
+.timeframe .item.active .status {
+  border-top: 3px solid rgb(61, 181, 170);
+}
+
+@media (max-width: 768px) {
+  .timeframe .timestamp {
+    transform: none;
+    margin: 0;
+  }
+  .timeframe {
+    flex-direction: column;
+    align-items: center;
+  }
+  .timeframe .item {
+    align-items: center;
+    gap: 10px;
+  }
+  .timeframe .item.active .status {
+    border-right: 3px solid rgb(61, 181, 170);
+  }
+  .timeframe .item.active .border-last {
+    border: none;
+  }
+  .timeframe .item .status {
+    border-right: 3px solid #fff;
+    border-top: none;
+    min-height: 100px;
+    padding: 0;
+    padding-right: 1px;
+  }
+  .timeframe .item .status span:before {
+    left: -7px;
+    align-content: center;
+    width: 15px;
+    height: 15px;
+  }
+  .timeframe .timestamp-text {
+    margin-top: 5px;
+  }
+  .timeframe .item-last {
+    flex-direction: column-reverse;
+  }
+  .timeframe .item .border-last {
+    border: none;
+    padding-right: 4px;
+  }
+  .timeframe .timestamp-last {
+    position: absolute;
+    top: 10px;
+  }
+  .timeframe .item.item-end {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
